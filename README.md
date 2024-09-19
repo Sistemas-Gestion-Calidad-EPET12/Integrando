@@ -29,7 +29,7 @@ Problemas de organización del código
 
 Memoización (Optimización con Cache)
 
-"""
+'''
 def fibonacci_memo(n, cache={}):
     if n in cache:
         return cache[n]
@@ -37,11 +37,11 @@ def fibonacci_memo(n, cache={}):
         return n
     cache[n] = fibonacci_memo(n - 1, cache) + fibonacci_memo(n - 2, cache)
     return cache[n]
-"""
+'''
 
 Iterativo (En lugar de recursivo)
 
-"""
+'''
 def fibonacci_iterativo(n):
     if n <= 1:
         return n
@@ -49,11 +49,11 @@ def fibonacci_iterativo(n):
     for _ in range(2, n + 1):
         a, b = b, a + b
     return b
-"""
+'''
 
 Programación Dinámica (Bottom-Up)
 
-"""
+'''
 def fibonacci_dp(n):
     if n <= 1:
         return n
@@ -62,6 +62,6 @@ def fibonacci_dp(n):
     for i in range(2, n + 1):
         dp[i] = dp[i - 1] + dp[i - 2]
     return dp[n]
-"""
+'''
 
 
